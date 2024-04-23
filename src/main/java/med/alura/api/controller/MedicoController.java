@@ -1,6 +1,6 @@
 package med.alura.api.controller;
 
-import med.alura.api.endereco.Endereco;
+import jakarta.transaction.Transactional;
 import med.alura.api.medico.DadosCadastroMedico;
 import med.alura.api.medico.Medico;
 import med.alura.api.medico.MedicoRepository;
@@ -18,6 +18,7 @@ public class MedicoController {
     private MedicoRepository repository;
 
     @PostMapping
+    @Transactional
     public void cadastrar(@RequestBody DadosCadastroMedico dados) {
        repository.save(new Medico(dados));
     }
