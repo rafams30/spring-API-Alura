@@ -2,32 +2,25 @@ package med.alura.api.controller;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import med.alura.api.medico.DadosCadastroMedico;
-import med.alura.api.medico.Medico;
-import med.alura.api.medico.MedicoRepository;
+import med.alura.api.paciente.DadosCadastroPaciente;
+import med.alura.api.paciente.Paciente;
+import med.alura.api.paciente.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
-@RequestMapping("medicos")
-public class MedicoController {
+@RequestMapping("pacientes")
+public class PacienteController {
 
     @Autowired
-    private MedicoRepository repository;
+    private PacienteRepository repository;
 
     @PostMapping
     @Transactional
-    public void cadastrar(@RequestBody @Valid DadosCadastroMedico dados) {
-       repository.save(new Medico(dados));
-    }
-
-    @
-    public List<Medico> listar(){
-
+    public void cadastrar(@RequestBody @Valid DadosCadastroPaciente dados) {
+        repository.save(new Paciente(dados));
     }
 }
