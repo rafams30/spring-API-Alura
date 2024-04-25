@@ -46,7 +46,7 @@ public class Paciente {
             endereco.atualizarInformacoes(dados.endereco());
     }
 
-    public void inativar() {
+    public void excluir() {
         this.ativo = false;
     }
 
