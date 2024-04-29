@@ -1,4 +1,4 @@
-package med.alura.api.paciente;
+package med.alura.api.domain.paciente;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,6 +1,6 @@
-package med.alura.api.paciente;
+package med.alura.api.domain.paciente;
 
-import med.alura.api.endereco.Endereco;
+import med.alura.api.domain.endereco.Endereco;
 
 public record DadosDetalhamentoPaciente(String nome, String email, String telefone, String cpf, Endereco endereco) {
     public DadosDetalhamentoPaciente(Paciente paciente) {
